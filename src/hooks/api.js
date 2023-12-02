@@ -24,7 +24,6 @@ export const getOngoingAnime = async () => {
                 // Authorization: `Bearer ${import.meta.env.VITE_TOKEN}`,
             },
         });
-
         return response.data; // Return the data directly
     } catch (err) {
         console.error("Error fetching ongoing anime:", err);

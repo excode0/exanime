@@ -3,7 +3,7 @@ import { getAllAnime } from "@/hooks/api";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import { FaFilm } from "react-icons/fa";
-const page = () => {
+const AllAnime = () => {
   const [getAnimeData, setgetAnimeData] = useState<any[]>([]);
   const [loading, setLoading] = useState(true);
   const numberOfElements = 50;
@@ -76,4 +76,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default AllAnime;

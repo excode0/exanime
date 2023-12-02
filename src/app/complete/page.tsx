@@ -4,7 +4,7 @@ import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 
-const page = () => {
+const CompleteAnime = () => {
   const [getAnimeData, setgetAnimeData] = useState<any[]>([]);
 
   const [getPagination, setgetPagination] = useState("");
@@ -132,4 +132,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default CompleteAnime;

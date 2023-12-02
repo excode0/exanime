@@ -1,16 +1,16 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import { PageProps } from "../../../../../.next/types/app/layout";
 import { FC } from "react";
 import LoadingDetail from "@/helpers/LoadingDetail";
 import { getDetailAnime, getStreamDetailAnime } from "@/hooks/api";
 import AnimeSlider from "@/components/AnimeSlider";
+import { PageProps } from "../../../../../.next/types/app/layout";
 
 interface SlugAnimeDetail {
   param: { slug: string };
 }
 
-const Detail: FC<PageProps> = ({ params }) => {
+const DetailAnime: FC<PageProps> = ({ params }) => {
   const [loading, setIsLoading] = useState(true);
   const [detail, setDetail] = useState<any>({});
   const [streamdetail, setDetailStream] = useState<any>({});
@@ -217,4 +217,4 @@ const Detail: FC<PageProps> = ({ params }) => {
   );
 };
 
-export default Detail;
+export default DetailAnime;

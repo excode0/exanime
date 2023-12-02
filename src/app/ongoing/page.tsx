@@ -1,10 +1,9 @@
 "use client";
 import { getOngoingAnime, getOngoingAnimeMore } from "@/hooks/api";
-import { Console } from "console";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
 
-const page = () => {
+const OngoingAnime = () => {
   const [getAnimeData, setgetAnimeData] = useState<any[]>([]);
 
   const [getPagination, setgetPagination] = useState("");
@@ -135,4 +134,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default OngoingAnime;
