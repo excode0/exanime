@@ -94,6 +94,7 @@ const CompleteAnime = () => {
                 <Link
                 href="/anime/detail/[slug]"
                 as={`/anime/detail/${section.slug}`}
+                key={"Container"+sectionIndex}
               >
                 <div
                   key={sectionIndex}

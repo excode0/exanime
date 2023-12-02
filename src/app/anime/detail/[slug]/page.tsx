@@ -4,7 +4,8 @@ import { FC } from "react";
 import LoadingDetail from "@/helpers/LoadingDetail";
 import { getDetailAnime, getStreamDetailAnime } from "@/hooks/api";
 import AnimeSlider from "@/components/AnimeSlider";
-import { PageProps } from "../../../../../.next/types/app/layout";
+import { PageProps } from "../../../../../.next/types/app/page";
+
 
 interface SlugAnimeDetail {
   param: { slug: string };

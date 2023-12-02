@@ -49,6 +49,7 @@ const AllAnime = () => {
               <Link
                 href="/anime/detail/[slug]"
                 as={`/anime/detail/${val.link}`}
+                key={index+"a"}
               >
                 <div
                   key={index}
