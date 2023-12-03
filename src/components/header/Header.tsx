@@ -12,6 +12,13 @@ import {
 const Header = () => {
     const isLogin = true;
     const [menuShow, setMenuShow] = useState(false);
+    const HanldeMenuShow = () => {
+      if(menuShow != true){
+        setMenuShow(true)
+      }else{
+        setMenuShow(false)
+      }
+    }
   return (
     <header>
       <nav>
@@ -57,51 +64,38 @@ const Header = () => {
           } gap-4 bg-[#272931] text-xs items-center  py-2 px-4 rounded-md`}
         >
           <a
-            href="/home"
+            href="/"
             className="flex flex-col items-center gap-1 font-medium"
           >
             <AiOutlineHome className="text-white text-xl" />
             <span className="text-white text-[13px] block">Home</span>
           </a>
           <a
-            href="/about"
+            href="/ongoing"
             className="flex flex-col items-center gap-1 font-medium"
           >
             <AiOutlineInfoCircle className="text-white text-xl" />
-            <span className="text-white text-[13px] block">About</span>
+            <span className="text-white text-[13px] block">Ongoing</span>
           </a>
-          {isLogin && (
-            <a
-              href="/account"
-              className="flex flex-col items-center gap-1 font-medium"
-            >
-              <FiUser className="text-white text-xl" />
-              <span className="text-white text-[13px] block">Account</span>
-            </a>
-          )}
-
-          {isLogin ? (
-            <a
-              href="#"
-              className="flex flex-col items-center gap-1 font-medium"
-            //   onClick={handleLogOut}
-            >
-              <IoIosLogOut className="text-white text-xl" />
-              <span className="text-white text-[13px] block">Logout</span>
-            </a>
-          ) : (
-            <a
-              href="/sign-up"
-              className="flex flex-col items-center gap-1 font-medium"
-            >
-              <FiUser className="text-white text-xl" />
-              <span className="text-white text-[13px] block">Sign Up</span>
-            </a>
-          )}
+          <a
+            href="/complete"
+            className="flex flex-col items-center gap-1 font-medium"
+          >
+            <AiOutlineInfoCircle className="text-white text-xl" />
+            <span className="text-white text-[13px] block">Complete</span>
+          </a>
+          <a
+            href="/all-anime"
+            className="flex flex-col items-center gap-1 font-medium"
+          >
+            <AiOutlineInfoCircle className="text-white text-xl" />
+            <span className="text-white text-[13px] block">All Anime</span>
+          </a>
+          
         </div>
         <div
           className="hamburgerMenu px-2 py-2 rounded-md bg-[#272931]"
-        //   onClick={handleMenuShow}
+          onClick={HanldeMenuShow}
         >
           <BiMenu className="text-4xl text-[#5c9af0]" />
         </div>
